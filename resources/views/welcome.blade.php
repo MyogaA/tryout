@@ -79,7 +79,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="job_section">
-					    <h1 class="jobs_text">Marketing jobs</h1>
+					    <h1 class="jobs_text">Marketing Artikel</h1>
 					    <p class="dummy_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
 					    <div class="apply_bt"><a href="#">Apply now</a></div>
 					</div>
@@ -100,7 +100,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="job_section_2">
-					    <h1 class="jobs_text">Industrial jobs</h1>
+					    <h1 class="jobs_text">Industrial artikel</h1>
 					    <p class="dummy_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
 					    <div class="apply_bt"><a href="#">Apply now</a></div>
 					</div>
@@ -115,7 +115,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="job_section">
-					    <h1 class="jobs_text">Corporate jobs</h1>
+					    <h1 class="jobs_text">Corporate artikel</h1>
 					    <p class="dummy_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
 					    <div class="apply_bt"><a href="#">Apply now</a></div>
 					</div>
@@ -136,7 +136,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="job_section_2">
-					    <h1 class="jobs_text">Government jobs</h1>
+					    <h1 class="jobs_text">Government artikel</h1>
 					    <p class="dummy_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
 					    <div class="apply_bt"><a href="#">Apply now</a></div>
 					</div>

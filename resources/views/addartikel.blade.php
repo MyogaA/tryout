@@ -40,7 +40,7 @@
                 </div>
                 <div method="post" enctype="multipart/form-data" class="form-group">
                   <label for="gambar">Gambar</label>
-                  <input type="file" name="gambar_artikel" class="form-control" id="gambar" placeholder="Masukkan gambar">
+                  <input type="file"  name="gambar_artikel" class="form-control" id="gambar" placeholder="Masukkan gambar">
                 </div>
                 <div class="form-group">
                   <input type="hidden" name="user_id" value="{{ auth()->user()->id }}" class="form-control" id="user">

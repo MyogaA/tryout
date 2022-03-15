@@ -39,13 +39,7 @@ class AddController extends Controller
         $data->kategori_id = $request->kategori_id;
         $data->judul_artikel = $request->judul_artikel;
         $data->isi_artikel = $request->isi_artikel;
-        if($request->hasFile('gambar_artikel')){
-            $file = $request->file('gambar_artikel');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() .'.'.$extension;
-            $file->move('gambar/', $filename);
-            $data->gambar_artikel = 'gambar/'. $filename;
-        }
+        $data->gambar_artikel = $request->gambar_artikel;
         $data->save();
         return redirect()->route('dataartikel');
     }
