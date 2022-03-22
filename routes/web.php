@@ -5,6 +5,7 @@ use App\Http\Controllers\{
     AuthController,
     AdminController,
     AddController,
+    TkategoriController,
 };
 
 
@@ -37,3 +38,10 @@ Route::post('/savedata',[AddController::class, "store"])->name('savedata');
 Route::get('/deleteartikel/{id}',[AddController::class, "destroy"])->name('deleteartikel');
 Route::get('/editdata/{id}',[AddController::class, "show"])->name('editdata');
 Route::post('/updatedata/{id}',[AddController::class, "update"])->name('updatedata');
+
+Route::get('/tambahKategori', function(){
+    return view('tambahKategori');
+});
+Route::get('/datakategori',[TkategoriController::class, "index"])->name('datakategori');
+Route::post('/savedata',[TkategoriController::class, "store"])->name('savedata');
+

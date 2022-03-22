@@ -26,22 +26,14 @@
               <thead>
                 <tr>
                   <th>id</th>
-                  <th>user_id</th>
                   <th>kategori</th>
-                  <th>judul</th>
-                  <th>isi</th>
-                  <th>gambar</th>
                 </tr>
               </thead>
                <tbody>
                  @foreach ($data as $item)
                  <tr> 
                   <td>{{ $item->id }}</td>
-                   <td>{{ $item->user_id }}</td>
-                   <td>{{ $item->kategori_id }}</td>
-                   <td>{{ $item->judul_artikel }}</td>
-                   <td>{{ $item->isi_artikel }}</td>
-                   <td>{{ $item->gambar_artikel }}</td>
+                   <td>{{ $item->nama_kategori }}</td>
                    <td>
                     <a href="{{ route('editdata', $id = $item->id) }}"><button class="btn btn-primary">update</button></a>
                     <a href="{{ route('deleteartikel', $id = $item->id) }}"><button class="btn btn-danger">delete</button></a>

@@ -46,7 +46,7 @@
                    <a class="nav-link" href="recurments.html">Artikel Berita</a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link" href="companies.html">Artikel Remaja</a>
+                   <a class="nav-link" href="tambahKategori">Kategori</a>
                 </li>
                 <li class="nav-item">
                    <a class="nav-link" href="services.html">SERVICES</a>
