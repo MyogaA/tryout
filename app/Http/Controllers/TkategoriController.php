@@ -16,6 +16,7 @@ class TkategoriController extends Controller
         $data = Tkategori::all();
         return view('datakategori', compact('data'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -36,7 +37,7 @@ class TkategoriController extends Controller
     public function store(Request $request)
     {
         $data = new Tkategori;
-        $data->id= $request->id;
+        $data->id_kategori= $request->id_kategori;
         $data->nama_kategori = $request->nama_kategori;
         $data->save();
         return redirect()->route('datakategori');
@@ -48,9 +49,14 @@ class TkategoriController extends Controller
      * @param  \App\Models\Tkategori  $tkategori
      * @return \Illuminate\Http\Response
      */
-    public function show(Tkategori $tkategori)
+    public function show($id)
     {
-        //
+        $data = Tkategori::where('id',$id)->first();
+        if ($data) {
+            return view('editkategori', ["data" => $data]);
+        } else {
+            return abort(404);
+        }
     }
 
     /**
@@ -71,9 +77,23 @@ class TkategoriController extends Controller
      * @param  \App\Models\Tkategori  $tkategori
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tkategori $tkategori)
+    public function update(Request $request,$id)
     {
-        //
+        $data = Tkategori::where('id',$id)->first();
+        if ($data) {
+            $data->id_kategori = $request->id_kategori;
+            $data->nama_kategori = $request->nama_kategori;
+            $result = $data->save();
+
+            if ($result) {
+                return redirect()->route('datakategori');
+
+            } else {
+                return abort(404);
+            }
+        } else {
+            return abort(404);
+        }
     }
 
     /**
@@ -82,8 +102,18 @@ class TkategoriController extends Controller
      * @param  \App\Models\Tkategori  $tkategori
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tkategori $tkategori)
+    public function destroy($id)
     {
-        //
+        
+        $data = Tkategori::where('id',$id)->first();
+        if ($data) {
+            if ($data->delete()) {
+                return redirect()->route('datakategori');
+            } else {
+                return abort(404);
+            }
+        } else {
+            return abort(404);
+        }
     }
 }

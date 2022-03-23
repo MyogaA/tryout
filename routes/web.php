@@ -36,12 +36,15 @@ Route::get('/add',[AddController::class, "index"])->name('add');
 Route::get('/dataartikel',[AdminController::class, "index"])->name('dataartikel');
 Route::post('/savedata',[AddController::class, "store"])->name('savedata');
 Route::get('/deleteartikel/{id}',[AddController::class, "destroy"])->name('deleteartikel');
+Route::get('/deletekategori/{id}',[TkategoriController::class, "destroy"])->name('deletekategori');
 Route::get('/editdata/{id}',[AddController::class, "show"])->name('editdata');
 Route::post('/updatedata/{id}',[AddController::class, "update"])->name('updatedata');
+Route::get('/editkategori/{id}',[TkategoriController::class, "show"])->name('editkategori');
+Route::post('/updatekategori/{id}',[TkategoriController::class, "update"])->name('updatekategori');
 
 Route::get('/tambahKategori', function(){
     return view('tambahKategori');
 });
 Route::get('/datakategori',[TkategoriController::class, "index"])->name('datakategori');
-Route::post('/savedata',[TkategoriController::class, "store"])->name('savedata');
+Route::post('/savekategori',[TkategoriController::class, "store"])->name('savekategori');
 

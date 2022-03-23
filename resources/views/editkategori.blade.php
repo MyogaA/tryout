@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Tambah Kategori</h1>
+                <h1 class="m-0 text-dark">Edit kategori</h1>
             <!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -19,22 +19,21 @@
           <!-- jquery validation -->
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title"><Tfoot>Tambah Kategori</Tfoot></h3>
+              <h3 class="card-title"><Tfoot>Edit Data</Tfoot></h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form method="POST" action="{{ route('savekategori') }}" id="quickForm">
+            <form method="POST" action="{{ route('updatekategori', $id = $data->id) }}" id="quickForm">
               @csrf
               <div class="card-body">
                 <div class="form-group">
-                  <label for="id">id_kategori</label>
-                  <input type="text" name="id_kategori" class="form-control" id="id_kategori" placeholder="Masukkan id">
+                  <label for="id_kategori">id_kategori</label>
+                  <input type="text" value="{{ $data->id_kategori }}" name="id_kategori" class="form-control" id="kategori" placeholder="Masukkan kategori">
                 </div>
                 <div class="form-group">
-                  <label for="kategori">Kategori</label>
-                  <input type="text" name="nama_kategori" class="form-control" id="nama_kategori" placeholder="Masukkan judul">
+                  <label for="kategori">kategori</label>
+                  <input type="text" value="{{ $data->nama_kategori }}"  name="nama_kategori" class="form-control" id="judul" placeholder="Masukkan judul">
                 </div>
-                
               </div>
               <!-- /.card-body -->
               <div class="card-footer">

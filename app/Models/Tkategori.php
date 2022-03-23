@@ -9,6 +9,6 @@ class Tkategori extends Model
 {
     use HasFactory;
     protected $table = "kategori";
-    protected $fillable = ["id, nama_kategori"];
+    protected $fillable = ["id,id_kategori nama_kategori"];
     protected $data;
 }

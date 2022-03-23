@@ -25,18 +25,18 @@
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>id</th>
+                  <th>id_kategori</th>
                   <th>kategori</th>
                 </tr>
               </thead>
                <tbody>
                  @foreach ($data as $item)
                  <tr> 
-                  <td>{{ $item->id }}</td>
+                  <td>{{ $item->id_kategori }}</td>
                    <td>{{ $item->nama_kategori }}</td>
                    <td>
-                    <a href="{{ route('editdata', $id = $item->id) }}"><button class="btn btn-primary">update</button></a>
-                    <a href="{{ route('deleteartikel', $id = $item->id) }}"><button class="btn btn-danger">delete</button></a>
+                    <a href="{{ route('editkategori', $id = $item->id) }}"><button class="btn btn-primary">update</button></a>
+                    <a href="{{ route('deletekategori', $id = $item->id) }}"><button class="btn btn-danger">delete</button></a>
                    </td>
                  </tr>
                  @endforeach
